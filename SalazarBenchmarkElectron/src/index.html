@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Salazar Benchmark</title>
+  </head>
+  <body>
+    <h1>Salazar Benchmark</h1>
+    <button onclick="rodarBenchmark()">Executar Benchmark</button>
+    <pre id="resultado"></pre>
+
+    <script>
+      async function rodarBenchmark() {
+        const resultado = await window.electronAPI.rodarBenchmark();
+        document.getElementById('resultado').innerText = resultado;
+      }
+    </script>
+  </body>
+</html>

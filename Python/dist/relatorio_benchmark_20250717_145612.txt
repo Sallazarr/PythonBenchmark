@@ -1,0 +1,30 @@
+===== PAYER - RELATÓRIO DE BENCHMARK =====
+Data: 2025-07-17 14:56:12
+
+[Configurações Mínimas Recomendadas]
+CPU: Frequência >= 2.0 GHz
+RAM: >= 7 GB
+Sistema Operacional: Windows 7 ou superior
+
+[CPU]
+Nome: 11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz
+Núcleos: 2 | Threads: 4
+Frequência Máxima: 2995 MHz
+Tempo de processamento teste: 0.695 segundos
+Pontuação CPU: 8.61/10
+
+[RAM]
+Total: 7.74 GB | Uso atual: 88.9%
+Pontuação RAM: 9.675/10
+
+[Disco]
+Total: 217.11 GB | Livre: 75.64 GB | Uso: 65.2%
+Tempo escrita: 0.005s | Tempo leitura: 0.02s
+Pontuação Disco: 9.95/10
+
+[Sistema Operacional]
+Windows 11 (64bit)
+
+CONDIÇÃO: APTA PARA O SISTEMA
+
+Pontuação Geral: 9.41/10

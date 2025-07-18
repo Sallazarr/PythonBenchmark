@@ -1,0 +1,4 @@
+===== PAYER - RELATÓRIO DE BENCHMARK =====
+Data: 2025-07-17 13:38:36
+
+[Configurações Mínimas Recomendadas]
