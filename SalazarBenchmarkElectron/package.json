@@ -3,11 +3,14 @@
   "productName": "salazarbenchmarkelectron",
   "version": "1.0.0",
   "description": "My Electron application description",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "electron-forge start",
+    "vue:serve": "cd renderer && npm run serve",
+    "dev": "concurrently -k \"npm run vue:serve\" \"cross-env ELECTRON_START_URL=http://localhost:8080 npm run start\"",
+    "vue:build": "cd renderer && npm run build",
     "package": "electron-forge package",
-    "make": "electron-forge make",
+    "make": "npm run vue:build && electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
@@ -18,7 +21,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "vue": "^3.5.17"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.8.1",
@@ -29,17 +33,15 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
     "@electron-forge/plugin-fuses": "^7.8.1",
     "@electron/fuses": "^1.8.0",
+    "concurrently": "^9.2.0",
+    "cross-env": "^7.0.3",
     "electron": "37.2.3"
   },
-
-"build": {
-  "files": [
-    "python_bin/**",
-    "src/**",
-    "index.html"
-  ]
-}
-
-
-
+  "build": {
+    "files": [
+      "python_bin/**",
+      "src/**",
+      "index.html"
+    ]
+  }
 }
