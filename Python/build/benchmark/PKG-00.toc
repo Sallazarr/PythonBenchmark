@@ -1,4 +1,5 @@
-('C:\\GitHub paths\\Salazar Benchmark\\build\\benchmark\\benchmark.pkg',
+('C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
+ 'folder\\PythonBenchmark\\Python\\build\\benchmark\\benchmark.pkg',
  {'BINARY': True,
   'DATA': True,
   'EXECUTABLE': True,
@@ -10,117 +11,176 @@
   'SYMLINK': False},
  [('pyi-contents-directory _internal', '', 'OPTION'),
   ('PYZ-00.pyz',
-   'C:\\GitHub paths\\Salazar Benchmark\\build\\benchmark\\PYZ-00.pyz',
+   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
+   'folder\\PythonBenchmark\\Python\\build\\benchmark\\PYZ-00.pyz',
    'PYZ'),
   ('struct',
-   'C:\\GitHub paths\\Salazar '
-   'Benchmark\\build\\benchmark\\localpycs\\struct.pyc',
+   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
+   'folder\\PythonBenchmark\\Python\\build\\benchmark\\localpycs\\struct.pyc',
    'PYMODULE'),
   ('pyimod01_archive',
-   'C:\\GitHub paths\\Salazar '
-   'Benchmark\\build\\benchmark\\localpycs\\pyimod01_archive.pyc',
+   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
+   'folder\\PythonBenchmark\\Python\\build\\benchmark\\localpycs\\pyimod01_archive.pyc',
    'PYMODULE'),
   ('pyimod02_importers',
-   'C:\\GitHub paths\\Salazar '
-   'Benchmark\\build\\benchmark\\localpycs\\pyimod02_importers.pyc',
+   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
+   'folder\\PythonBenchmark\\Python\\build\\benchmark\\localpycs\\pyimod02_importers.pyc',
    'PYMODULE'),
   ('pyimod03_ctypes',
-   'C:\\GitHub paths\\Salazar '
-   'Benchmark\\build\\benchmark\\localpycs\\pyimod03_ctypes.pyc',
+   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
+   'folder\\PythonBenchmark\\Python\\build\\benchmark\\localpycs\\pyimod03_ctypes.pyc',
    'PYMODULE'),
   ('pyimod04_pywin32',
-   'C:\\GitHub paths\\Salazar '
-   'Benchmark\\build\\benchmark\\localpycs\\pyimod04_pywin32.pyc',
+   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
+   'folder\\PythonBenchmark\\Python\\build\\benchmark\\localpycs\\pyimod04_pywin32.pyc',
    'PYMODULE'),
   ('pyiboot01_bootstrap',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
    'PYSOURCE'),
   ('pyi_rth_inspect',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
    'PYSOURCE'),
   ('pyi_rth_pywintypes',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks\\pyi_rth_pywintypes.py',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks\\pyi_rth_pywintypes.py',
    'PYSOURCE'),
   ('pyi_rth_pythoncom',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks\\pyi_rth_pythoncom.py',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks\\pyi_rth_pythoncom.py',
    'PYSOURCE'),
   ('benchmark',
-   'C:\\GitHub paths\\Salazar Benchmark\\benchmark.py',
+   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
+   'folder\\PythonBenchmark\\Python\\benchmark.py',
    'PYSOURCE'),
   ('python313.dll',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll',
    'BINARY'),
   ('pywin32_system32\\pywintypes313.dll',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pywin32_system32\\pywintypes313.dll',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pywin32_system32\\pywintypes313.dll',
    'BINARY'),
   ('pywin32_system32\\pythoncom313.dll',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pywin32_system32\\pythoncom313.dll',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pywin32_system32\\pythoncom313.dll',
    'BINARY'),
-  ('unicodedata.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\unicodedata.pyd',
+  ('select.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\select.pyd',
    'EXTENSION'),
-  ('_decimal.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_decimal.pyd',
+  ('_multiprocessing.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('pyexpat.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_ssl.pyd',
    'EXTENSION'),
   ('_hashlib.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_hashlib.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_hashlib.pyd',
    'EXTENSION'),
-  ('select.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\select.pyd',
+  ('unicodedata.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_decimal.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_decimal.pyd',
    'EXTENSION'),
   ('_socket.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_socket.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_socket.pyd',
    'EXTENSION'),
   ('_lzma.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_lzma.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_lzma.pyd',
    'EXTENSION'),
   ('_bz2.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_bz2.pyd',
-   'EXTENSION'),
-  ('win32\\_win32sysloader.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\_win32sysloader.pyd',
-   'EXTENSION'),
-  ('win32\\win32api.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32api.pyd',
-   'EXTENSION'),
-  ('Pythonwin\\win32ui.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\Pythonwin\\win32ui.pyd',
-   'EXTENSION'),
-  ('win32\\win32event.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32event.pyd',
-   'EXTENSION'),
-  ('win32\\win32trace.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32trace.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_bz2.pyd',
    'EXTENSION'),
   ('_ctypes.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_ctypes.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_ctypes.pyd',
+   'EXTENSION'),
+  ('_queue.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('win32\\_win32sysloader.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\_win32sysloader.pyd',
+   'EXTENSION'),
+  ('win32\\win32api.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32api.pyd',
+   'EXTENSION'),
+  ('Pythonwin\\win32ui.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\Pythonwin\\win32ui.pyd',
+   'EXTENSION'),
+  ('win32\\win32event.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32event.pyd',
+   'EXTENSION'),
+  ('win32\\win32trace.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32trace.pyd',
    'EXTENSION'),
   ('_wmi.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_wmi.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_wmi.pyd',
    'EXTENSION'),
   ('psutil\\_psutil_windows.pyd',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\psutil\\_psutil_windows.pyd',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\psutil\\_psutil_windows.pyd',
    'EXTENSION'),
   ('VCRUNTIME140.dll',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll',
    'BINARY'),
   ('VCRUNTIME140_1.dll',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll',
    'BINARY'),
   ('libcrypto-3.dll',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libcrypto-3.dll',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libcrypto-3.dll',
    'BINARY'),
-  ('Pythonwin\\mfc140u.dll',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\Pythonwin\\mfc140u.dll',
+  ('libssl-3.dll',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libssl-3.dll',
    'BINARY'),
   ('libffi-8.dll',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libffi-8.dll',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libffi-8.dll',
+   'BINARY'),
+  ('Pythonwin\\mfc140u.dll',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\Pythonwin\\mfc140u.dll',
    'BINARY'),
   ('python3.dll',
-   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\python3.dll',
+   'C:\\Users\\JAPONES '
+   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\python3.dll',
    'BINARY'),
   ('base_library.zip',
-   'C:\\GitHub paths\\Salazar Benchmark\\build\\benchmark\\base_library.zip',
+   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
+   'folder\\PythonBenchmark\\Python\\build\\benchmark\\base_library.zip',
    'DATA')],
  'python313.dll',
  False,

@@ -1,0 +1,29 @@
+==== RELATÓRIO SALAZAR BENCHMARK ====
+
+[Sistema Operacional]
+Versão: Microsoft Windows 10 Pro (64 bits)
+Versão Interna: 10.0.19045
+Data da BIOS: 20180723000000.000000+000
+Uptime da máquina: 3 days, 17:17:10
+
+[CPU]
+Nome: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
+Núcleos: 6
+Threads: 6
+Frequência_mhz: 2808
+Pontuação: 9.07 / 10
+
+[RAM]
+Total: 19.85 GB
+Usado: 12.22 GB
+Porcentagem usado: 61.55 GB
+Pontuação: 10 / 10
+
+[Discos]
+Dispositivo: A:\, Livre: 344.79 GB, Usado: 61.4%
+Dispositivo: C:\, Livre: 97.97 GB, Usado: 86.7%
+Dispositivo: D:\, Livre: 71.91 GB, Usado: 63.2%
+Dispositivo: E:\, Livre: 59.32 GB, Usado: 75.1%
+Pontuação: 9.23 / 10
+
+Todos os requisitos mínimos foram atendidos.

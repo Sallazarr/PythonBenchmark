@@ -35,5 +35,4 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['C:\\GitHub paths\\Salazar Benchmark\\favicon\\favicon.ico'],
 )
