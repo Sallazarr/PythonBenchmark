@@ -1,6 +1,4 @@
-Aplicação desktop para execução de benchmarks de sistema usando Electron, Vue.js e Python.
-
-## Como Rodar o Projeto - Guia Rápido
+## Como rodar o projeto em modo dev
 
 ### Pré-requisitos
 - **Node.js** (versão 16+)
@@ -38,7 +36,7 @@ cd ..
 npm run dev
 ```
 
-### 🎯 O que acontece:
+### O que acontece:
 - Abre uma janela Electron com interface Vue
 - 4 botões grandes na tela inicial
 - Botão "benchmark" executa o script Python
