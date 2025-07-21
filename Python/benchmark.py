@@ -131,11 +131,25 @@ def get_usb_ports(w):
 # Função que retorna lista de dispositivos USB conectados (nomes)
 def get_usb_devices(w):
     devices = []
-    for usb in w.Win32_USBControllerDevice():
+
+    # Dispositivos PnP com ID USB
+    for device in w.Win32_PnPEntity():
         try:
-            devices.append(usb.Dependent.Name)
+            if device.PNPDeviceID and device.PNPDeviceID.startswith("USB\\"):
+                devices.append(device.Name)
         except:
             continue
+
+    # Dispositivos de armazenamento conectados por USB
+    for disk in w.Win32_DiskDrive():
+        try:
+            if disk.InterfaceType == "USB":
+                devices.append(f"{disk.Model} (Armazenamento USB)")
+        except:
+            continue
+
+    # Eliminar duplicatas
+    devices = list(set(devices))
     return devices
 
 # Função que simula trabalho pesado somando quadrados de números em um intervalo
@@ -365,7 +379,6 @@ def gerar_relatorio(cpu, ram, disks, os_info, erros, tempo_cpu, tempos_discos, s
 
         f.write("[Sistema e Máquina]\n")
         f.write(f"Sistema Operacional: {win_edition} ({os_info['architecture']}) - Versão {win_version}\n")
-        f.write(f"Tipo da máquina: {machine_type}\n")
         f.write(f"Uptime da máquina: {uptime}\n")
         f.write(f"Data da BIOS: {bios_date}\n")
         f.write(f"Placa Mãe: {mb_manufacturer} - {mb_product}\n\n")
