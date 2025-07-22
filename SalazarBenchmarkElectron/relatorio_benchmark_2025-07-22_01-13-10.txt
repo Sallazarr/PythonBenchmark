@@ -1,0 +1,87 @@
+[Sistema Operacional]
+Sistema: Windows
+Versão: 10.0.19045
+Release: 10
+Arquitetura: 64bit
+Uptime: 6 days, 3:07:23
+Data BIOS: 2018-07-23
+Windows: Microsoft Windows 10 Pro - Versão 10.0.19045
+Tipo de Máquina: Desktop
+========================================
+
+[CPU]
+Nome: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
+Núcleos Físicos: 6
+Núcleos Lógicos: 6
+Frequência Máxima: 2808 MHz
+Tempo teste soma quadrados: 0.948s
+Tempo teste fatorial: 0.067s
+========================================
+
+[Memória RAM]
+Total: 19.85 GB
+Usada: 13.28 GB
+Disponível: 6.57 GB
+Uso: 66.9%
+Tempo alocação RAM: 0.233s
+========================================
+
+[Discos]
+Disco: A:\ (A:\)
+  Total: 894.24 GB
+  Livre: 344.77 GB
+  Usado (%): 61.4%
+  Tempo escrita: 0.561s
+  Tempo leitura: 0.129s
+
+Disco: C:\ (C:\)
+  Total: 735.05 GB
+  Livre: 85.51 GB
+  Usado (%): 88.4%
+  Tempo escrita: 2.625s
+  Tempo leitura: 0.159s
+
+Disco: D:\ (D:\)
+  Total: 195.31 GB
+  Livre: 71.9 GB
+  Usado (%): 63.2%
+  Tempo escrita: 4.088s
+  Tempo leitura: 0.122s
+
+Disco: E:\ (E:\)
+  Total: 238.46 GB
+  Livre: 59.32 GB
+  Usado (%): 75.1%
+  Tempo escrita: 0.576s
+  Tempo leitura: 0.141s
+
+========================================
+
+[Placa Mãe]
+Fabricante: ASRock
+Modelo: H310M-HG4
+========================================
+
+[Portas USB]
+- NVIDIA USB Type-C Port Policy Controller
+- NVIDIA USB 3.10 eXtensible Host Controller - 1.10 (Microsoft)
+- Parsec Virtual USB Adapter
+- Intel(R) USB 3.1 eXtensible Host Controller - 1.10 (Microsoft)
+========================================
+
+[Dispositivos USB Detectados]
+- HyperX SoloCast
+- Dispositivo de Entrada USB
+- USB Audio CODEC 
+- USB Root Hub (USB 3.0)
+- USB Audio Device
+- USB Composite Device
+========================================
+
+[Pontuações]
+CPU: 9.78/10
+RAM: 10/10
+Disco: 7.72/10
+Pontuação Final: 9.75/10
+========================================
+

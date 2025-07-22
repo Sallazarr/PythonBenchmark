@@ -25,7 +25,8 @@ function createWindow() {
     });
 
   win.loadURL(startUrl)
-  win.webContents.openDevTools(); /* pra abrir o devtools no executavel */
+  win.removeMenu();
+ // win.webContents.openDevTools(); /* pra abrir o devtools no executavel */
 }
 
 // Registra o handler do benchmark (apenas UMA vez, com PYTHONIOENCODING)

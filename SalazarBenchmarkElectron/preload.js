@@ -2,6 +2,9 @@
 // https://www.electronjs.org/docs/latest/tutorial/process-model#preload-scripts
 const { contextBridge, ipcRenderer } = require('electron');
 
+
 contextBridge.exposeInMainWorld('electronAPI', {
   rodarBenchmark: () => ipcRenderer.invoke('rodar-benchmark')
+
+  
 });
