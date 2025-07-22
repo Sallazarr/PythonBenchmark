@@ -3,7 +3,7 @@ Sistema: Windows
 Versão: 10.0.19045
 Release: 10
 Arquitetura: 64bit
-Uptime: 6 days, 2:42:21
+Uptime: 6 days, 2:43:42
 Data BIOS: 2018-07-23
 Windows: Microsoft Windows 10 Pro - Versão 10.0.19045
 Tipo de Máquina: Desktop
@@ -14,16 +14,16 @@ Nome: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
 Núcleos Físicos: 6
 Núcleos Lógicos: 6
 Frequência Máxima: 2808 MHz
-Tempo teste soma quadrados: 0.883s
+Tempo teste soma quadrados: 0.928s
 Tempo teste fatorial: 0.058s
 ========================================
 
 [Memória RAM]
 Total: 19.85 GB
-Usada: 12.03 GB
-Disponível: 7.82 GB
-Uso: 60.6%
-Tempo alocação RAM: 0.166s
+Usada: 11.87 GB
+Disponível: 7.98 GB
+Uso: 59.8%
+Tempo alocação RAM: 0.197s
 ========================================
 
 [Discos]
@@ -31,29 +31,29 @@ Disco: A:\ (A:\)
   Total: 894.24 GB
   Livre: 344.77 GB
   Usado (%): 61.4%
-  Tempo escrita: 0.504s
-  Tempo leitura: 0.11s
+  Tempo escrita: 0.494s
+  Tempo leitura: 0.102s
 
 Disco: C:\ (C:\)
   Total: 735.05 GB
   Livre: 85.71 GB
   Usado (%): 88.3%
-  Tempo escrita: 1.443s
-  Tempo leitura: 0.123s
+  Tempo escrita: 1.758s
+  Tempo leitura: 0.097s
 
 Disco: D:\ (D:\)
   Total: 195.31 GB
   Livre: 71.9 GB
   Usado (%): 63.2%
-  Tempo escrita: 3.062s
-  Tempo leitura: 0.104s
+  Tempo escrita: 2.541s
+  Tempo leitura: 0.099s
 
 Disco: E:\ (E:\)
   Total: 238.46 GB
   Livre: 59.32 GB
   Usado (%): 75.1%
-  Tempo escrita: 0.584s
-  Tempo leitura: 0.099s
+  Tempo escrita: 0.569s
+  Tempo leitura: 0.098s
 
 ========================================
 
@@ -70,18 +70,18 @@ Modelo: H310M-HG4
 ========================================
 
 [Dispositivos USB Detectados]
-- Dispositivo de Entrada USB
-- USB Composite Device
-- HyperX SoloCast
 - USB Audio CODEC 
-- USB Root Hub (USB 3.0)
 - USB Audio Device
+- USB Root Hub (USB 3.0)
+- USB Composite Device
+- Dispositivo de Entrada USB
+- HyperX SoloCast
 ========================================
 
 [Pontuações]
 CPU: 10/10
 RAM: 10/10
-Disco: 8.4/10
+Disco: 8.37/10
 Pontuação Final: 9.92/10
 ========================================
 

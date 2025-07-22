@@ -1,0 +1,105 @@
+{
+    "Sistema Operacional": {
+        "Sistema": "Windows",
+        "Versão": "10.0.19045",
+        "Release": "10",
+        "Arquitetura": "64bit",
+        "Uptime": "6 days, 2:43:42",
+        "Data BIOS": "2018-07-23",
+        "Windows": "Microsoft Windows 10 Pro",
+        "Versão Windows": "10.0.19045",
+        "Tipo de Máquina": "Desktop"
+    },
+    "CPU": {
+        "name": "Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz",
+        "cores": 6,
+        "threads": 6,
+        "freq": 2808,
+        "Tempo teste soma quadrados": 0.928,
+        "Tempo teste fatorial": 0.058
+    },
+    "RAM": {
+        "total": 19.85,
+        "used": 11.87,
+        "available": 7.98,
+        "percent": 59.8,
+        "Tempo alocação RAM": 0.197
+    },
+    "Discos": [
+        {
+            "device": "A:\\",
+            "mountpoint": "A:\\",
+            "fstype": "NTFS",
+            "total": 894.24,
+            "free": 344.77,
+            "used_percent": 61.4
+        },
+        {
+            "device": "C:\\",
+            "mountpoint": "C:\\",
+            "fstype": "NTFS",
+            "total": 735.05,
+            "free": 85.71,
+            "used_percent": 88.3
+        },
+        {
+            "device": "D:\\",
+            "mountpoint": "D:\\",
+            "fstype": "NTFS",
+            "total": 195.31,
+            "free": 71.9,
+            "used_percent": 63.2
+        },
+        {
+            "device": "E:\\",
+            "mountpoint": "E:\\",
+            "fstype": "NTFS",
+            "total": 238.46,
+            "free": 59.32,
+            "used_percent": 75.1
+        }
+    ],
+    "Tempos Discos": {
+        "A:\\": {
+            "write": 0.494,
+            "read": 0.102
+        },
+        "C:\\": {
+            "write": 1.758,
+            "read": 0.097
+        },
+        "D:\\": {
+            "write": 2.541,
+            "read": 0.099
+        },
+        "E:\\": {
+            "write": 0.569,
+            "read": 0.098
+        }
+    },
+    "Placa Mãe": {
+        "Fabricante": "ASRock",
+        "Modelo": "H310M-HG4"
+    },
+    "Portas USB": [
+        "NVIDIA USB Type-C Port Policy Controller",
+        "NVIDIA USB 3.10 eXtensible Host Controller - 1.10 (Microsoft)",
+        "Parsec Virtual USB Adapter",
+        "Intel(R) USB 3.1 eXtensible Host Controller - 1.10 (Microsoft)"
+    ],
+    "Dispositivos USB": [
+        "USB Audio CODEC ",
+        "USB Audio Device",
+        "USB Root Hub (USB 3.0)",
+        "USB Composite Device",
+        "Dispositivo de Entrada USB",
+        "HyperX SoloCast"
+    ],
+    "Erros": [],
+    "Pontuações": {
+        "CPU": 10,
+        "RAM": 10,
+        "Disco": 8.37,
+        "Final": 9.92
+    }
+}

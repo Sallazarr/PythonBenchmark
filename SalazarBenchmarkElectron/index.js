@@ -33,7 +33,7 @@ ipcMain.handle("rodar-benchmark", async () => {
   const exePath = path.join(
     __dirname,
     "python_bin",
-    "SalazarBenchmark.exe"
+    "PayerBenchmark.exe"
   );
 
   return new Promise((resolve, reject) => {

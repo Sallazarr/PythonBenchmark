@@ -8,6 +8,7 @@ import os
 import concurrent.futures  # Para execução multithread (paralela)
 from collections import Counter  # Para contar itens em listas
 import numpy as np  # Biblioteca para operações numéricas, aqui usada para testar alocação de RAM
+import json
 
 # Função que converte bytes para gigabytes com 2 casas decimais
 def bytes_to_gb(bytes_value):
@@ -316,86 +317,142 @@ def verificar_requisitos_avancados(win_edition, machine_type):
     return erros
 
 # Função que gera o relatório final em arquivo texto
-def gerar_relatorio(cpu, ram, disks, os_info, erros, tempo_cpu, tempos_discos, scores,
-                   uptime, bios_date, win_edition, win_version, machine_type, dispositivos_usb, portas_usb,
-                   tempo_cpu_fatorial=None, mb_manufacturer=None, mb_product=None):
-    data = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    filename = f"relatorio_benchmark_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+def gerar_relatorio(cpu, ram, discos, os_info, placa_mae, uptime, portas_usb, dispositivos_usb,
+                    tempo_cpu=None, tempo_cpu_fatorial=None, tempos_discos=None, tempo_ram=None,
+                    scores=None, erros=None, bios_date=None, win_edition=None, win_version=None, machine_type=None):
 
-    with open(filename, 'w', encoding='utf-8') as f:
-        f.write("===== PAYER - RELATÓRIO DE BENCHMARK =====\n")
-        f.write(f"Data: {data}\n")
-        f.write("--------------------------------------------\n\n")
 
-        f.write("[Configurações Mínimas Recomendadas]\n")
-        f.write("CPU: Frequência >= 1.9 GHz\n")
-        f.write("RAM: >= 4 GB\n")
-        f.write("Sistema Operacional: Windows 7 ou superior\n\n")
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    nome_arquivo_txt = f"relatorio_benchmark_{timestamp}.txt"
+    nome_arquivo_json= f"relatorio_benchmark_{timestamp}.json"
+    relatorio_txt = ""
 
-        f.write("============================================\n\n")
+    # Sistema Operacional
+    relatorio_txt += "[Sistema Operacional]\n"
+    relatorio_txt += f"Sistema: {os_info['system']}\n"
+    relatorio_txt += f"Versão: {os_info['version']}\n"
+    relatorio_txt += f"Release: {os_info['release']}\n"
+    relatorio_txt += f"Arquitetura: {os_info['architecture']}\n"
+    relatorio_txt += f"Uptime: {uptime}\n"
+    relatorio_txt += f"Data BIOS: {bios_date}\n"
+    relatorio_txt += f"Windows: {win_edition} - Versão {win_version}\n"
+    relatorio_txt += f"Tipo de Máquina: {machine_type}\n"
+    relatorio_txt += "="*40 + "\n\n"
 
-        f.write("[CPU]\n")
-        f.write(f"Nome: {cpu['name']}\n")
-        f.write(f"Núcleos: {cpu['cores']} | Threads: {cpu['threads']}\n")
-        f.write(f"Frequência Máxima: {cpu['freq']} MHz\n")
-        f.write(f"Tempo de processamento teste soma quadrados: {tempo_cpu} segundos\n")
-        if tempo_cpu_fatorial is not None:
-            f.write(f"Tempo de processamento teste fatorial: {tempo_cpu_fatorial} segundos\n")
-        f.write(f"Pontuação CPU: {scores[0]}/10\n\n")
+    # CPU
+    relatorio_txt += "[CPU]\n"
+    relatorio_txt += f"Nome: {cpu['name']}\n"
+    relatorio_txt += f"Núcleos Físicos: {cpu['cores']}\n"
+    relatorio_txt += f"Núcleos Lógicos: {cpu['threads']}\n"
+    relatorio_txt += f"Frequência Máxima: {cpu['freq']} MHz\n"
+    relatorio_txt += f"Tempo teste soma quadrados: {tempo_cpu}s\n"
+    relatorio_txt += f"Tempo teste fatorial: {tempo_cpu_fatorial}s\n"
+    relatorio_txt += "="*40 + "\n\n"
 
-        f.write("============================================\n\n")
+    # RAM
+    relatorio_txt += "[Memória RAM]\n"
+    relatorio_txt += f"Total: {ram['total']} GB\n"
+    relatorio_txt += f"Usada: {ram['used']} GB\n"
+    relatorio_txt += f"Disponível: {ram['available']} GB\n"
+    relatorio_txt += f"Uso: {ram['percent']}%\n"
+    relatorio_txt += f"Tempo alocação RAM: {tempo_ram}s\n"
+    relatorio_txt += "="*40 + "\n\n"
 
-        f.write("[RAM]\n")
-        f.write(f"Total: {ram['total']} GB | Usada: {ram['used']} GB | Disponível: {ram['available']} GB | Uso atual: {ram['percent']}%\n")
-        f.write(f"Pontuação RAM: {scores[1]}/10\n\n")
+    # Discos
+    relatorio_txt += "[Discos]\n"
+    for disco in discos:
+        relatorio_txt += f"Disco: {disco['device']} ({disco['mountpoint']})\n"
+        relatorio_txt += f"  Total: {disco['total']} GB\n"
+        relatorio_txt += f"  Livre: {disco['free']} GB\n"
+        relatorio_txt += f"  Usado (%): {disco['used_percent']}%\n"
+        if tempos_discos and disco['device'] in tempos_discos:
+            relatorio_txt += f"  Tempo escrita: {tempos_discos[disco['device']]['write']}s\n"
+            relatorio_txt += f"  Tempo leitura: {tempos_discos[disco['device']]['read']}s\n"
+        relatorio_txt += "\n"
+    relatorio_txt += "="*40 + "\n\n"
 
-        f.write("============================================\n\n")
+    # Placa Mãe
+    relatorio_txt += "[Placa Mãe]\n"
+    relatorio_txt += f"Fabricante: {placa_mae['Fabricante']}\n"
+    relatorio_txt += f"Modelo: {placa_mae['Modelo']}\n"
+    relatorio_txt += "="*40 + "\n\n"
 
-        f.write("[Discos]\n")
-        for disk in disks:
-            device = disk["device"]
-            f.write(f"Disco: {device} ({disk['fstype']}) montado em {disk['mountpoint']}\n")
-            f.write(f"Total: {disk['total']} GB | Livre: {disk['free']} GB | Uso: {disk['used_percent']}%\n")
-            tempos = tempos_discos.get(device, {"write": -1, "read": -1})
-            f.write(f"Tempo escrita: {tempos['write']}s | Tempo leitura: {tempos['read']}s\n\n")
+    # Portas USB
+    relatorio_txt += "[Portas USB]\n"
+    for porta in portas_usb:
+        relatorio_txt += f"- {porta}\n"
+    relatorio_txt += "="*40 + "\n\n"
 
-        f.write("============================================\n\n")
+    # Dispositivos USB
+    relatorio_txt += "[Dispositivos USB Detectados]\n"
+    for device in dispositivos_usb:
+        relatorio_txt += f"- {device}\n"
+    relatorio_txt += "="*40 + "\n\n"
 
-        f.write("[Portas USB]\n")
-        for port in portas_usb:
-            f.write(f"- {port}\n")
+    # Erros (se existirem)
+    if erros:
+        relatorio_txt += "[Erros e Avisos]\n"
+        for erro in erros:
+            relatorio_txt += f"- {erro}\n"
+        relatorio_txt += "="*40 + "\n\n"
 
-        f.write("\n============================================\n\n")
+    # Pontuações (se existirem)
+    if scores:
+        relatorio_txt += "[Pontuações]\n"
+        relatorio_txt += f"CPU: {scores[0]}/10\n"
+        relatorio_txt += f"RAM: {scores[1]}/10\n"
+        relatorio_txt += f"Disco: {scores[2]}/10\n"
+        relatorio_txt += f"Pontuação Final: {scores[3]}/10\n"
+        relatorio_txt += "="*40 + "\n\n"
 
-        f.write("[Dispositivos USB Detectados]\n")
-        dispositivos_contados = Counter(dispositivos_usb)
-        for device, count in dispositivos_contados.most_common():
-            if count > 1:
-                f.write(f"- {device} (x{count})\n")
-            else:
-                f.write(f"- {device}\n")
+    # Monta JSON com todas as infos
+    relatorio_json = {
+        "Sistema Operacional": {
+            "Sistema": os_info['system'],
+            "Versão": os_info['version'],
+            "Release": os_info['release'],
+            "Arquitetura": os_info['architecture'],
+            "Uptime": uptime,
+            "Data BIOS": bios_date,
+            "Windows": win_edition,
+            "Versão Windows": win_version,
+            "Tipo de Máquina": machine_type
+        },
+        "CPU": {
+            **cpu,
+            "Tempo teste soma quadrados": tempo_cpu,
+            "Tempo teste fatorial": tempo_cpu_fatorial
+        },
+        "RAM": {
+            **ram,
+            "Tempo alocação RAM": tempo_ram
+        },
+        "Discos": discos,
+        "Tempos Discos": tempos_discos,
+        "Placa Mãe": placa_mae,
+        "Portas USB": portas_usb,
+        "Dispositivos USB": dispositivos_usb,
+        "Erros": erros,
+        "Pontuações": {
+            "CPU": scores[0] if scores else None,
+            "RAM": scores[1] if scores else None,
+            "Disco": scores[2] if scores else None,
+            "Final": scores[3] if scores else None,
+        }
+    }
 
-        f.write("\n============================================\n\n")
+    # Salva arquivos
+ # Salva arquivos com timestamp no nome
+    with open(nome_arquivo_txt, "w", encoding="utf-8") as f_txt:
+        f_txt.write(relatorio_txt)
 
-        f.write("[Sistema e Máquina]\n")
-        f.write(f"Sistema Operacional: {win_edition} ({os_info['architecture']}) - Versão {win_version}\n")
-        f.write(f"Uptime da máquina: {uptime}\n")
-        f.write(f"Data da BIOS: {bios_date}\n")
-        f.write(f"Placa Mãe: {mb_manufacturer} - {mb_product}\n\n")
+    with open(nome_arquivo_json, "w", encoding="utf-8") as f_json:
+        json.dump(relatorio_json, f_json, indent=4, ensure_ascii=False)
 
-        f.write("--------------------------------------------\n\n")
+    print(f"Relatórios salvos como:\n{nome_arquivo_txt}\n{nome_arquivo_json}")
 
-        if erros:
-            f.write("CONDIÇÃO: INAPTA\n")
-            f.write("Problemas encontrados:\n")
-            for erro in erros:
-                f.write(f"- {erro}\n")
-        else:
-            f.write("CONDIÇÃO: APTA PARA O SISTEMA\n")
 
-        f.write(f"Pontuação Geral: {scores[3]}/10\n")
 
-    print(f"\nRelatório salvo como: {filename}")
 
 # Bloco principal que executa tudo quando o script é rodado
 if __name__ == "__main__":
@@ -491,6 +548,15 @@ if __name__ == "__main__":
     print("PONTUAÇÃO FINAL:", scores[3], "/10")
 
     # Gera o relatório completo em arquivo
-    gerar_relatorio(cpu, ram, disks, os_info, erros, tempo_cpu, tempos_discos, scores,
-                    uptime, bios_date, win_edition, win_version, machine_type,
-                    dispositivos_usb, portas_usb, tempo_cpu_fatorial, mb_manufacturer, mb_product)
+    placa_mae = {
+    "Fabricante": mb_manufacturer,
+    "Modelo": mb_product
+}
+
+gerar_relatorio(cpu, ram, disks, os_info, placa_mae, uptime, portas_usb, dispositivos_usb,
+                tempo_cpu=tempo_cpu, tempo_cpu_fatorial=tempo_cpu_fatorial, tempos_discos=tempos_discos,
+                tempo_ram=tempo_ram, scores=scores, erros=erros,
+                bios_date=bios_date, win_edition=win_edition, win_version=win_version, machine_type=machine_type)
+
+    
+ 

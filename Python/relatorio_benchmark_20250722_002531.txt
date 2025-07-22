@@ -1,0 +1,74 @@
+===== PAYER - RELATÓRIO DE BENCHMARK =====
+Data: 2025-07-22 00:25:31
+--------------------------------------------
+
+[Configurações Mínimas Recomendadas]
+CPU: Frequência >= 1.9 GHz
+RAM: >= 4 GB
+Sistema Operacional: Windows 7 ou superior
+
+============================================
+
+[CPU]
+Nome: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
+Núcleos: 6 | Threads: 6
+Frequência Máxima: 2808 MHz
+Tempo de processamento teste soma quadrados: 0.903 segundos
+Tempo de processamento teste fatorial: 0.059 segundos
+Pontuação CPU: 10/10
+
+============================================
+
+[RAM]
+Total: 19.85 GB | Usada: 11.93 GB | Disponível: 7.93 GB | Uso atual: 60.1%
+Pontuação RAM: 10/10
+
+============================================
+
+[Discos]
+Disco: A:\ (NTFS) montado em A:\
+Total: 894.24 GB | Livre: 344.77 GB | Uso: 61.4%
+Tempo escrita: 0.493s | Tempo leitura: 0.102s
+
+Disco: C:\ (NTFS) montado em C:\
+Total: 735.05 GB | Livre: 85.69 GB | Uso: 88.3%
+Tempo escrita: 1.461s | Tempo leitura: 0.097s
+
+Disco: D:\ (NTFS) montado em D:\
+Total: 195.31 GB | Livre: 71.9 GB | Uso: 63.2%
+Tempo escrita: 2.415s | Tempo leitura: 0.097s
+
+Disco: E:\ (NTFS) montado em E:\
+Total: 238.46 GB | Livre: 59.32 GB | Uso: 75.1%
+Tempo escrita: 0.585s | Tempo leitura: 0.121s
+
+============================================
+
+[Portas USB]
+- NVIDIA USB Type-C Port Policy Controller
+- NVIDIA USB 3.10 eXtensible Host Controller - 1.10 (Microsoft)
+- Parsec Virtual USB Adapter
+- Intel(R) USB 3.1 eXtensible Host Controller - 1.10 (Microsoft)
+
+============================================
+
+[Dispositivos USB Detectados]
+- HyperX SoloCast
+- USB Root Hub (USB 3.0)
+- USB Audio CODEC 
+- USB Audio Device
+- USB Composite Device
+- Dispositivo de Entrada USB
+
+============================================
+
+[Sistema e Máquina]
+Sistema Operacional: Microsoft Windows 10 Pro (64bit) - Versão 10.0.19045
+Uptime da máquina: 6 days, 2:19:45
+Data da BIOS: 2018-07-23
+Placa Mãe: ASRock - H310M-HG4
+
+--------------------------------------------
+
+CONDIÇÃO: APTA PARA O SISTEMA
+Pontuação Geral: 9.93/10

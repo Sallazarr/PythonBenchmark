@@ -1,0 +1,6 @@
+[Sistema Operacional]
+Sistema: Windows
+Versão: 10.0.19045
+Uptime: 6 days, 2:39:50
+========================================
+
