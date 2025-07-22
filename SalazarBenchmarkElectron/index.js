@@ -3,6 +3,8 @@ const path = require("path");
 const { execFile } = require("child_process");
 const url = require("url");
 
+const {connectDb, getInstanceDb, closeConnectionDb} = require('./database/connection');
+
 // Cria a janela
 function createWindow() {
   const win = new BrowserWindow({
@@ -24,18 +26,14 @@ function createWindow() {
       slashes: true,
     });
 
-  win.loadURL(startUrl)
+  win.loadURL(startUrl);
   win.removeMenu();
- // win.webContents.openDevTools(); /* pra abrir o devtools no executavel */
+  // win.webContents.openDevTools(); /* pra abrir o devtools no executavel */
 }
 
 // Registra o handler do benchmark (apenas UMA vez, com PYTHONIOENCODING)
 ipcMain.handle("rodar-benchmark", async () => {
-  const exePath = path.join(
-    __dirname,
-    "python_bin",
-    "PayerBenchmark.exe"
-  );
+  const exePath = path.join(__dirname, "python_bin", "PayerBenchmark.exe");
 
   return new Promise((resolve, reject) => {
     execFile(
@@ -60,7 +58,8 @@ ipcMain.handle("rodar-benchmark", async () => {
 });
 
 // Inicializa o app
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
+  await connectDb(); // chama conexão com mongo
   createWindow();
 
   app.on("activate", () => {
@@ -71,3 +70,5 @@ app.whenReady().then(() => {
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
 });
+
+app.on("will-quit", closeConnectionDb) //mata conexão com mongo
