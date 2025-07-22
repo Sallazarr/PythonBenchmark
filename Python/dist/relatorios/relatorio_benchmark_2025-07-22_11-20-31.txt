@@ -1,0 +1,70 @@
+[Sistema Operacional]
+Sistema: Windows
+Versão: 10.0.26100
+Release: 11
+Arquitetura: 64bit
+Uptime: 10 days, 20:59:55
+Data BIOS: 2025-03-05
+Windows: Microsoft Windows 11 Home Single Language - Versão 10.0.26100
+Tipo de Máquina: Outro
+========================================
+
+[CPU]
+Nome: 11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz
+Núcleos Físicos: 2
+Núcleos Lógicos: 4
+Frequência Máxima: 2995 MHz
+Tempo teste soma quadrados: 0.736s
+Tempo teste fatorial: 0.049s
+========================================
+
+[Memória RAM]
+Total: 7.74 GB
+Usada: 7.14 GB
+Disponível: 0.6 GB
+Uso: 92.2%
+Tempo alocação RAM: 0.405s
+========================================
+
+[Discos]
+Disco: C:\ (C:\)
+  Total: 217.11 GB
+  Livre: 72.37 GB
+  Usado (%): 66.7%
+  Tempo escrita: 0.344s
+  Tempo leitura: 0.21s
+
+========================================
+
+[Placa Mãe]
+Fabricante: Dell Inc.
+Modelo: 03DJ8T
+========================================
+
+[Portas USB]
+- Intel(R) USB 3.10 eXtensible Host Controller - 1.20 (Microsoft)
+========================================
+
+[Dispositivos USB Detectados]
+- USB Composite Device
+- Dispositivo Serial USB (COM8)
+- Intel(R) Wireless Bluetooth(R)
+- USB PnP Sound Device
+- Goodix MOC Fingerprint
+- USB Root Hub (USB 3.0)
+- Integrated Webcam
+- Dispositivo de Entrada USB
+========================================
+
+[Erros e Avisos]
+- Sistema operacional não é versão Pro: Microsoft Windows 11 Home Single Language
+- Recomendado usar máquina Desktop, detectado: Outro
+========================================
+
+[Pontuações]
+CPU: 10/10
+RAM: 9.84/10
+Disco: 10.0/10
+Pontuação Final: 9.94/10
+========================================
+

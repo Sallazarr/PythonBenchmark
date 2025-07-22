@@ -9,6 +9,9 @@ import concurrent.futures  # Para execução multithread (paralela)
 from collections import Counter  # Para contar itens em listas
 import numpy as np  # Biblioteca para operações numéricas, aqui usada para testar alocação de RAM
 import json
+import sys
+
+
 
 # Função que converte bytes para gigabytes com 2 casas decimais
 def bytes_to_gb(bytes_value):
@@ -308,19 +311,33 @@ def verificar_requisitos(cpu, ram, disks, os_info):
     return erros
 
 # Função que verifica requisitos mais avançados
-def verificar_requisitos_avancados(win_edition, machine_type):
+def verificar_requisitos_avancados(machine_type):
     erros = []
-    if "Pro" not in win_edition:
-        erros.append(f"Sistema operacional não é versão Pro: {win_edition}")
     if machine_type != "Desktop":
         erros.append(f"Recomendado usar máquina Desktop, detectado: {machine_type}")
     return erros
 
-# Função que gera o relatório final em arquivo texto
+
+
+def obter_caminho_pasta_relatorios():
+    caminho_base = os.path.join(
+        os.environ.get("LOCALAPPDATA", ""), "salazarbenchmarkelectron"
+    )
+    caminho_relatorios = os.path.join(caminho_base, "relatorios")
+
+    if os.path.exists(caminho_base):
+        if not os.path.exists(caminho_relatorios):
+            os.makedirs(caminho_relatorios)
+        return caminho_relatorios
+    else:
+        caminho_local = os.path.join(os.path.dirname(os.path.abspath(sys.executable if getattr(sys, 'frozen', False) else __file__)), "relatorios")
+        if not os.path.exists(caminho_local):
+            os.makedirs(caminho_local)
+        return caminho_local
+
 def gerar_relatorio(cpu, ram, discos, os_info, placa_mae, uptime, portas_usb, dispositivos_usb,
                     tempo_cpu=None, tempo_cpu_fatorial=None, tempos_discos=None, tempo_ram=None,
                     scores=None, erros=None, bios_date=None, win_edition=None, win_version=None, machine_type=None):
-
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     nome_arquivo_txt = f"relatorio_benchmark_{timestamp}.txt"
@@ -389,14 +406,14 @@ def gerar_relatorio(cpu, ram, discos, os_info, placa_mae, uptime, portas_usb, di
         relatorio_txt += f"- {device}\n"
     relatorio_txt += "="*40 + "\n\n"
 
-    # Erros (se existirem)
+    # Erros
     if erros:
         relatorio_txt += "[Erros e Avisos]\n"
         for erro in erros:
             relatorio_txt += f"- {erro}\n"
         relatorio_txt += "="*40 + "\n\n"
 
-    # Pontuações (se existirem)
+    # Pontuações
     if scores:
         relatorio_txt += "[Pontuações]\n"
         relatorio_txt += f"CPU: {scores[0]}/10\n"
@@ -405,7 +422,7 @@ def gerar_relatorio(cpu, ram, discos, os_info, placa_mae, uptime, portas_usb, di
         relatorio_txt += f"Pontuação Final: {scores[3]}/10\n"
         relatorio_txt += "="*40 + "\n\n"
 
-    # Monta JSON com todas as infos
+    # JSON
     relatorio_json = {
         "Sistema Operacional": {
             "Sistema": os_info['system'],
@@ -441,21 +458,26 @@ def gerar_relatorio(cpu, ram, discos, os_info, placa_mae, uptime, portas_usb, di
         }
     }
 
-    # Salva arquivos
- # Salva arquivos com timestamp no nome
-    with open(nome_arquivo_txt, "w", encoding="utf-8") as f_txt:
+    pasta_relatorios = obter_caminho_pasta_relatorios()
+
+    caminho_txt = os.path.join(pasta_relatorios, nome_arquivo_txt)
+    caminho_json = os.path.join(pasta_relatorios, nome_arquivo_json)
+
+    with open(caminho_txt, "w", encoding="utf-8") as f_txt:
         f_txt.write(relatorio_txt)
 
-    with open(nome_arquivo_json, "w", encoding="utf-8") as f_json:
+    with open(caminho_json, "w", encoding="utf-8") as f_json:
         json.dump(relatorio_json, f_json, indent=4, ensure_ascii=False)
 
-    print(f"Relatórios salvos como:\n{nome_arquivo_txt}\n{nome_arquivo_json}")
+    print(f"Relatórios salvos em:\n{caminho_txt}\n{caminho_json}")
+    print(f"Pasta onde foram salvos os relatórios: {pasta_relatorios}")
+    
 
 
-
-
+    
 # Bloco principal que executa tudo quando o script é rodado
 if __name__ == "__main__":
+    
     w = wmi.WMI()  # Instancia objeto WMI para consultas ao Windows
 
     # Obtém todas as informações necessárias
@@ -521,7 +543,7 @@ if __name__ == "__main__":
 
     # Verifica requisitos mínimos e avançados
     erros = verificar_requisitos(cpu, ram, disks, os_info)
-    erros.extend(verificar_requisitos_avancados(win_edition, machine_type))
+    erros.extend(verificar_requisitos_avancados(machine_type))
 
     # Calcula pontuações finais
     scores = calcular_pontuacoes(cpu, ram, disks, tempo_cpu, tempo_cpu_fatorial, tempos_discos, tempo_ram)
@@ -547,6 +569,8 @@ if __name__ == "__main__":
     print("PONTUAÇÕES:", f"CPU: {scores[0]}/10 | RAM: {scores[1]}/10 | Disco: {scores[2]}/10")
     print("PONTUAÇÃO FINAL:", scores[3], "/10")
 
+
+
     # Gera o relatório completo em arquivo
     placa_mae = {
     "Fabricante": mb_manufacturer,
@@ -559,4 +583,4 @@ gerar_relatorio(cpu, ram, disks, os_info, placa_mae, uptime, portas_usb, disposi
                 bios_date=bios_date, win_edition=win_edition, win_version=win_version, machine_type=machine_type)
 
     
- 
+

@@ -1,5 +1,5 @@
-('C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
- 'folder\\PythonBenchmark\\Python\\build\\PayerBenchmark\\PayerBenchmark.pkg',
+('C:\\GitHub paths\\Salazar '
+ 'Benchmark\\Python\\build\\PayerBenchmark\\PayerBenchmark.pkg',
  {'BINARY': True,
   'DATA': True,
   'EXECUTABLE': True,
@@ -11,325 +11,246 @@
   'SYMLINK': False},
  [('pyi-contents-directory _internal', '', 'OPTION'),
   ('PYZ-00.pyz',
-   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
-   'folder\\PythonBenchmark\\Python\\build\\PayerBenchmark\\PYZ-00.pyz',
+   'C:\\GitHub paths\\Salazar '
+   'Benchmark\\Python\\build\\PayerBenchmark\\PYZ-00.pyz',
    'PYZ'),
   ('struct',
-   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
-   'folder\\PythonBenchmark\\Python\\build\\PayerBenchmark\\localpycs\\struct.pyc',
+   'C:\\GitHub paths\\Salazar '
+   'Benchmark\\Python\\build\\PayerBenchmark\\localpycs\\struct.pyc',
    'PYMODULE'),
   ('pyimod01_archive',
-   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
-   'folder\\PythonBenchmark\\Python\\build\\PayerBenchmark\\localpycs\\pyimod01_archive.pyc',
+   'C:\\GitHub paths\\Salazar '
+   'Benchmark\\Python\\build\\PayerBenchmark\\localpycs\\pyimod01_archive.pyc',
    'PYMODULE'),
   ('pyimod02_importers',
-   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
-   'folder\\PythonBenchmark\\Python\\build\\PayerBenchmark\\localpycs\\pyimod02_importers.pyc',
+   'C:\\GitHub paths\\Salazar '
+   'Benchmark\\Python\\build\\PayerBenchmark\\localpycs\\pyimod02_importers.pyc',
    'PYMODULE'),
   ('pyimod03_ctypes',
-   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
-   'folder\\PythonBenchmark\\Python\\build\\PayerBenchmark\\localpycs\\pyimod03_ctypes.pyc',
+   'C:\\GitHub paths\\Salazar '
+   'Benchmark\\Python\\build\\PayerBenchmark\\localpycs\\pyimod03_ctypes.pyc',
    'PYMODULE'),
   ('pyimod04_pywin32',
-   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
-   'folder\\PythonBenchmark\\Python\\build\\PayerBenchmark\\localpycs\\pyimod04_pywin32.pyc',
+   'C:\\GitHub paths\\Salazar '
+   'Benchmark\\Python\\build\\PayerBenchmark\\localpycs\\pyimod04_pywin32.pyc',
    'PYMODULE'),
   ('pyiboot01_bootstrap',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
    'PYSOURCE'),
   ('pyi_rth_inspect',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
-   'PYSOURCE'),
-  ('pyi_rth_setuptools',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
    'PYSOURCE'),
   ('pyi_rth_pkgutil',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_setuptools',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
    'PYSOURCE'),
   ('pyi_rth_multiprocessing',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
    'PYSOURCE'),
   ('pyi_rth_pywintypes',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks\\pyi_rth_pywintypes.py',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks\\pyi_rth_pywintypes.py',
    'PYSOURCE'),
   ('pyi_rth_pythoncom',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks\\pyi_rth_pythoncom.py',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks\\pyi_rth_pythoncom.py',
    'PYSOURCE'),
   ('benchmark',
-   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
-   'folder\\PythonBenchmark\\Python\\benchmark.py',
+   'C:\\GitHub paths\\Salazar Benchmark\\Python\\benchmark.py',
    'PYSOURCE'),
   ('python313.dll',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll',
-   'BINARY'),
-  ('numpy.libs\\msvcp140-263139962577ecda4cd9469ca360a746.dll',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy.libs\\msvcp140-263139962577ecda4cd9469ca360a746.dll',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll',
    'BINARY'),
   ('numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll',
+   'BINARY'),
+  ('numpy.libs\\msvcp140-263139962577ecda4cd9469ca360a746.dll',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy.libs\\msvcp140-263139962577ecda4cd9469ca360a746.dll',
    'BINARY'),
   ('pywin32_system32\\pywintypes313.dll',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pywin32_system32\\pywintypes313.dll',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pywin32_system32\\pywintypes313.dll',
    'BINARY'),
   ('pywin32_system32\\pythoncom313.dll',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pywin32_system32\\pythoncom313.dll',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pywin32_system32\\pythoncom313.dll',
    'BINARY'),
   ('select.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\select.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\select.pyd',
    'EXTENSION'),
   ('_multiprocessing.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_multiprocessing.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_multiprocessing.pyd',
    'EXTENSION'),
   ('pyexpat.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\pyexpat.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\pyexpat.pyd',
    'EXTENSION'),
   ('_ssl.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_ssl.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_ssl.pyd',
    'EXTENSION'),
   ('_hashlib.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_hashlib.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_hashlib.pyd',
    'EXTENSION'),
   ('unicodedata.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\unicodedata.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\unicodedata.pyd',
    'EXTENSION'),
   ('_decimal.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_decimal.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_decimal.pyd',
    'EXTENSION'),
   ('_socket.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_socket.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_socket.pyd',
    'EXTENSION'),
   ('_lzma.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_lzma.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_lzma.pyd',
    'EXTENSION'),
   ('_bz2.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_bz2.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_bz2.pyd',
    'EXTENSION'),
   ('_ctypes.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_ctypes.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_ctypes.pyd',
    'EXTENSION'),
   ('_queue.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_queue.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_queue.pyd',
    'EXTENSION'),
   ('_overlapped.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_overlapped.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_overlapped.pyd',
    'EXTENSION'),
   ('_asyncio.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_asyncio.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_asyncio.pyd',
    'EXTENSION'),
   ('numpy\\_core\\_multiarray_tests.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\_core\\_multiarray_tests.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\_core\\_multiarray_tests.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('numpy\\_core\\_multiarray_umath.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\_core\\_multiarray_umath.cp313-win_amd64.pyd',
-   'EXTENSION'),
-  ('charset_normalizer\\md__mypyc.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\charset_normalizer\\md__mypyc.cp313-win_amd64.pyd',
-   'EXTENSION'),
-  ('charset_normalizer\\md.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\charset_normalizer\\md.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\_core\\_multiarray_umath.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('win32\\win32pdh.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32pdh.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32pdh.pyd',
    'EXTENSION'),
   ('numpy\\linalg\\_umath_linalg.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\linalg\\_umath_linalg.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\linalg\\_umath_linalg.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('numpy\\random\\mtrand.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\mtrand.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\mtrand.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('numpy\\random\\bit_generator.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\bit_generator.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\bit_generator.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('numpy\\random\\_sfc64.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_sfc64.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_sfc64.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('numpy\\random\\_philox.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_philox.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_philox.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('numpy\\random\\_pcg64.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_pcg64.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_pcg64.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('numpy\\random\\_mt19937.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_mt19937.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_mt19937.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('numpy\\random\\_generator.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_generator.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_generator.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('numpy\\random\\_common.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_common.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_common.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('numpy\\random\\_bounded_integers.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_bounded_integers.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_bounded_integers.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('numpy\\fft\\_pocketfft_umath.cp313-win_amd64.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\fft\\_pocketfft_umath.cp313-win_amd64.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\fft\\_pocketfft_umath.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('win32\\_win32sysloader.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\_win32sysloader.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\_win32sysloader.pyd',
    'EXTENSION'),
   ('win32\\win32api.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32api.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32api.pyd',
    'EXTENSION'),
   ('Pythonwin\\win32ui.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\Pythonwin\\win32ui.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\Pythonwin\\win32ui.pyd',
    'EXTENSION'),
   ('win32\\win32event.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32event.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32event.pyd',
    'EXTENSION'),
   ('win32\\win32trace.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32trace.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32trace.pyd',
    'EXTENSION'),
   ('_wmi.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_wmi.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_wmi.pyd',
    'EXTENSION'),
   ('psutil\\_psutil_windows.pyd',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\psutil\\_psutil_windows.pyd',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\psutil\\_psutil_windows.pyd',
    'EXTENSION'),
   ('VCRUNTIME140.dll',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll',
    'BINARY'),
   ('VCRUNTIME140_1.dll',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll',
-   'BINARY'),
-  ('libcrypto-3.dll',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libcrypto-3.dll',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll',
    'BINARY'),
   ('libssl-3.dll',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libssl-3.dll',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libssl-3.dll',
+   'BINARY'),
+  ('libcrypto-3.dll',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libcrypto-3.dll',
    'BINARY'),
   ('libffi-8.dll',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libffi-8.dll',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libffi-8.dll',
    'BINARY'),
   ('Pythonwin\\mfc140u.dll',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\Pythonwin\\mfc140u.dll',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\Pythonwin\\mfc140u.dll',
    'BINARY'),
   ('python3.dll',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\python3.dll',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\python3.dll',
    'BINARY'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
-   'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
    'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
    'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
    'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
    'DATA'),
   ('setuptools\\_vendor\\jaraco\\text\\Lorem ipsum.txt',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
    'ipsum.txt',
    'DATA'),
-  ('numpy-2.3.1.dist-info\\METADATA',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\METADATA',
-   'DATA'),
-  ('numpy-2.3.1.dist-info\\LICENSE.txt',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\LICENSE.txt',
-   'DATA'),
-  ('numpy-2.3.1.dist-info\\entry_points.txt',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\entry_points.txt',
-   'DATA'),
-  ('numpy-2.3.1.dist-info\\REQUESTED',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\REQUESTED',
-   'DATA'),
-  ('numpy-2.3.1.dist-info\\RECORD',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\RECORD',
-   'DATA'),
-  ('numpy-2.3.1.dist-info\\INSTALLER',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\INSTALLER',
-   'DATA'),
   ('numpy-2.3.1.dist-info\\DELVEWHEEL',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\DELVEWHEEL',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\DELVEWHEEL',
    'DATA'),
   ('numpy-2.3.1.dist-info\\WHEEL',
-   'C:\\Users\\JAPONES '
-   'SAFADO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\WHEEL',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\WHEEL',
+   'DATA'),
+  ('numpy-2.3.1.dist-info\\METADATA',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\METADATA',
+   'DATA'),
+  ('numpy-2.3.1.dist-info\\entry_points.txt',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\entry_points.txt',
+   'DATA'),
+  ('numpy-2.3.1.dist-info\\REQUESTED',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\REQUESTED',
+   'DATA'),
+  ('numpy-2.3.1.dist-info\\LICENSE.txt',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\LICENSE.txt',
+   'DATA'),
+  ('numpy-2.3.1.dist-info\\INSTALLER',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\INSTALLER',
+   'DATA'),
+  ('numpy-2.3.1.dist-info\\RECORD',
+   'C:\\Users\\opera\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy-2.3.1.dist-info\\RECORD',
    'DATA'),
   ('base_library.zip',
-   'C:\\Users\\JAPONES SAFADO\\Desktop\\Codes\\GitHub '
-   'folder\\PythonBenchmark\\Python\\build\\PayerBenchmark\\base_library.zip',
+   'C:\\GitHub paths\\Salazar '
+   'Benchmark\\Python\\build\\PayerBenchmark\\base_library.zip',
    'DATA')],
  'python313.dll',
  False,
