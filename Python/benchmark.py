@@ -113,14 +113,20 @@ def get_windows_version_and_edition(w):
 
 # Função para obter o tipo de máquina (Desktop, Notebook, Outro) via WMI
 def get_machine_type(w):
-    chassis = w.Win32_SystemEnclosure()[0]
-    types = chassis.ChassisTypes  # Lista de códigos do tipo de gabinete
-    if 8 in types:
-        return "Notebook"
-    elif 3 in types:
-        return "Desktop"
-    else:
-        return "Outro"
+    try:
+        chassis = w.Win32_SystemEnclosure()[0]
+        types = chassis.ChassisTypes
+
+        notebook_types = {8, 9, 10, 14, 30, 31, 32}
+        # Se encontrar algum código notebook, retorna "Notebook"
+        if any(t in notebook_types for t in types):
+            return "Notebook"
+        else:
+            # Qualquer outro código, assume como Desktop
+            return "Desktop"
+    except:
+        # Em caso de erro, assume Desktop para não bloquear
+        return "Não foi possível detectar o tipo de máquina"
 
 # Função que retorna lista de controladores USB conectados (nomes)
 def get_usb_ports(w):
