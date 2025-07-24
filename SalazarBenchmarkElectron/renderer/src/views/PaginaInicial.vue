@@ -2,12 +2,8 @@
   <v-container fluid class="fill-height">
     <v-row>
       <!-- divide a pagina inciaal em 2 colunas -->
-      <v-col
-        v-for="(btn, index) in propriedadesBotoes"
-        :key="index"
-        cols="6"
-        class="d-flex justify-center align-center"
-      >
+      <v-col v-for="(btn, index) in propriedadesBotoes" :key="index" cols="6"
+        class="d-flex justify-center align-center">
         <!-- o laço exibe os botoes de acordo com os dados do array 'botoes' -->
         <v-btn
           width="100%"
@@ -17,6 +13,7 @@
           :loading="loadingIndex === index"
           @click="() => handleClick(index)"
         >
+
           <template v-slot:prepend>
             <v-icon :icon="btn.icon" size="70" />
           </template>
@@ -26,38 +23,23 @@
       </v-col>
     </v-row>
 
-    <!-- modal pra mostrar o resultado do benchmark -->
-    <v-dialog v-model="mostrarResultado" max-width="700">
-      <v-card>
-
-        <v-card-title class="text-h5">Resultado do Benchmark</v-card-title>
-
-        <v-card-text>
-          <v-data-table class="elevation-1" dense hide-default-footer />
-          <!-- mudar isso aqui quando o henrique mandar o result como json !!!!!!!!!!!! -->
-          <h3>Aqui em cima colocar os dados do benchmark</h3>
-          <pre>{{ resultado }}</pre>
-        </v-card-text>
-
-        <v-card-actions>
-
-          <v-spacer />
-
-          <v-btn color="primary" @click="mostrarResultado = false">
-            Fechar
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+    <!-- Componente que vai mostrar os dados do benchmark -->
+    <DialogBenchmark v-model="mostrarResultado" :benchmarkData="resultado" />
   </v-container>
 </template>
 
 <script>
+import DialogBenchmark from '@/components/DialogBenchmark.vue';
+
 export default {
+  components: {
+    DialogBenchmark
+  },
+
   data() {
     return {
       mostrarResultado: false,
-      resultado: "",
+      resultado: {},
       loadingIndex: null,
       propriedadesBotoes: [
         { text: "benchmark", icon: "mdi-chart-line", color: "#fa4f16" },
@@ -65,16 +47,90 @@ export default {
         { text: "sei la", icon: "mdi-cog", color: "#e62c5a" },
         { text: "vai saber", icon: "mdi-help-circle", color: "#f15d75" },
       ],
+      benchmarkData: {
+        "Sistema Operacional": {
+          "Sistema": "Windows",
+          "Versão": "10.0.26100",
+          "Release": "11",
+          "Arquitetura": "64bit",
+          "Uptime": "10 days, 20:59:55",
+          "Data BIOS": "2025-03-05",
+          "Windows": "Microsoft Windows 11 Home Single Language",
+          "Versão Windows": "10.0.26100",
+          "Tipo de Máquina": "Outro"
+        },
+        "CPU": {
+          "name": "11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz",
+          "cores": 2,
+          "threads": 4,
+          "freq": 2995,
+          "Tempo teste soma quadrados": 0.736,
+          "Tempo teste fatorial": 0.049
+        },
+        "RAM": {
+          "total": 7.74,
+          "used": 7.14,
+          "available": 0.6,
+          "percent": 92.2,
+          "Tempo alocação RAM": 0.405
+        },
+        "Discos": [
+          {
+            "device": "C:\\",
+            "mountpoint": "C:\\",
+            "fstype": "NTFS",
+            "total": 217.11,
+            "free": 72.37,
+            "used_percent": 66.7
+          }
+        ],
+        "Tempos Discos": {
+          "C:\\": {
+            "write": 0.344,
+            "read": 0.21
+          }
+        },
+        "Placa Mãe": {
+          "Fabricante": "Dell Inc.",
+          "Modelo": "03DJ8T"
+        },
+        "Portas USB": [
+          "Intel(R) USB 3.10 eXtensible Host Controller - 1.20 (Microsoft)"
+        ],
+        "Dispositivos USB": [
+          "USB Composite Device",
+          "Dispositivo Serial USB (COM8)",
+          "Intel(R) Wireless Bluetooth(R)",
+          "USB PnP Sound Device",
+          "Goodix MOC Fingerprint",
+          "USB Root Hub (USB 3.0)",
+          "Integrated Webcam",
+          "Dispositivo de Entrada USB"
+        ],
+        "Erros": [
+          "Sistema operacional não é versão Pro: Microsoft Windows 11 Home Single Language",
+          "Recomendado usar máquina Desktop, detectado: Outro"
+        ],
+        "Pontuações": {
+          "CPU": 10,
+          "RAM": 9.84,
+          "Disco": 10.0,
+          "Final": 9.94
+        }
+      }
     };
   },
 
   methods: {
     async handleClick(index) {
       this.loadingIndex = index;
-      // AQUI EU VOU MUDAR DEPOIS PRA PERSONALIZAR AS FUNCOES DE CADA BOTAO
-      await this.rodarBenchmark();
+      this.resultado = this.benchmarkData;
       this.mostrarResultado = true; //abre o modal
       this.loadingIndex = null;
+      console.log(this.resultado);
+      // AQUI EU VOU MUDAR DEPOIS PRA PERSONALIZAR AS FUNCOES DE CADA BOTAO
+      //await this.rodarBenchmark();
+      //this.mostrarResultado = true; //abre o modal
     },
 
     async rodarBenchmark() {
