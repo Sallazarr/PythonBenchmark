@@ -27,7 +27,7 @@ function createWindow() {
     });
 
   win.loadURL(startUrl);
-  win.removeMenu();
+  /* win.removeMenu(); */
   win.webContents.openDevTools(); /* pra abrir o devtools no executavel */
 }
 
