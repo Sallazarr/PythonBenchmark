@@ -24,7 +24,7 @@
     </v-row>
 
     <!-- Componente que vai mostrar os dados do benchmark -->
-    <DialogBenchmark v-model="mostrarResultado" :benchmarkData="resultado" />
+    <DialogBenchmark v-model="mostrarResultado" :benchmarkData="resultado" @close="mostrarResultado = false"/>
   </v-container>
 </template>
 
