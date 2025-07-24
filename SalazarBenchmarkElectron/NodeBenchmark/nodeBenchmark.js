@@ -449,8 +449,8 @@ async function gerarRelatorio(data) {
     "Partições": data.partitions,
     "Tempos Discos": data.temposDiscos,
     "Placa Mãe": data.motherboard,
-    "Portas USB": data.usbPorts,
-    "Dispositivos USB": data.usbDevices,
+    "Portas USB": data.usbPorts.map(nome =>({ nome })),
+    "Dispositivos USB": data.usbDevices.map(nome =>({ nome })),
     "Erros": data.erros,
     "Pontuações": {
       "CPU": data.scores ? data.scores[0] : null,

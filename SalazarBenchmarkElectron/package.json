@@ -18,9 +18,9 @@
     {
       "name": "@electron-forge/maker-squirrel",
       "config": {
-        "name": "SalazarBenchmark",
-        "setupExe": "SalazarBenchmark-Installer.exe",
-        "shortcutName": "Salazar Benchmark",
+        "name": "PayerBenchmark",
+        "setupExe": "PayerBenchmark-Installer.exe",
+        "shortcutName": "Payer Benchmark",
         "noMsi": true
       }
     }
@@ -35,6 +35,8 @@
     "dotenv": "^17.2.0",
     "electron-squirrel-startup": "^1.0.1",
     "mongodb": "^6.18.0",
+    "systeminformation": "^5.27.7",
+    "usb-detection": "^4.14.2",
     "vue": "^3.5.17"
   },
   "devDependencies": {
@@ -52,9 +54,9 @@
   },
   "build": {
     "files": [
-      "python_bin/**",
       "src/**",
-      "index.html"
+      "index.html",
+      "index.js"
     ]
   }
 }

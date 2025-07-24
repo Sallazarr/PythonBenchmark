@@ -1,6 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
-const { execFile } = require("child_process");
+const benchmark = require("./NodeBenchmark/nodeBenchmark")
 const url = require("url");
 
 const {connectDb, getInstanceDb, closeConnectionDb} = require('./database/connection');
@@ -27,34 +27,20 @@ function createWindow() {
     });
 
   win.loadURL(startUrl);
-  /* win.removeMenu(); */
+  //win.removeMenu(); 
   win.webContents.openDevTools(); /* pra abrir o devtools no executavel */
 }
 
 // Registra o handler do benchmark (apenas UMA vez, com PYTHONIOENCODING)
 ipcMain.handle("rodar-benchmark", async () => {
-  const exePath = path.join(__dirname, "python_bin", "PayerBenchmark.exe");
-
-  return new Promise((resolve, reject) => {
-    execFile(
-      exePath,
-      [],
-      {
-        env: {
-          ...process.env,
-          PYTHONIOENCODING: "utf-8",
-        },
-      },
-      (error, stdout, stderr) => {
-        if (error) {
-          console.error("Erro ao rodar o benchmark:", error);
-          reject(error.message);
-        } else {
-          resolve(stdout || stderr);
-        }
-      }
-    );
-  });
+  try{
+  const resultado = await benchmark.main();
+  return resultado
+  }catch(err){
+    console.error("erro ao rodar o benchmark:", err);
+    throw err;
+  }
+  
 });
 
 // Inicializa o app
