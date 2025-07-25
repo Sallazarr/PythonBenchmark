@@ -14,6 +14,15 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
+  "packagerConfig": {
+  "extraFiles": [
+    {
+      "from": "renderer/dist",
+      "to": "renderer/dist"
+    }
+  ]
+},
+
   "makers": [
     {
       "name": "@electron-forge/maker-squirrel",
@@ -22,6 +31,7 @@
         "setupExe": "PayerBenchmark-Installer.exe",
         "shortcutName": "Payer Benchmark",
         "noMsi": true
+        
       }
     }
   ],
