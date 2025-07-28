@@ -498,6 +498,10 @@ function verificarRequisitosAvancados(machineType) {
   return erros;
 }
 
+const { formatarDadosParaEnvio } = require('../utils/JsonFormatter.js');
+const { enviarBenchmarkAPI } = require('../utils/PostFormattedJson.js'); // ou qualquer nome que tenha usado
+
+
 
 // --- MAIN ---
 
@@ -544,7 +548,12 @@ async function main() {
   // Gera relatório
   await gerarRelatorio(dadosRelatorio);
 
+
   console.log("Benchmark finalizado.");
+
+   // Enviar JSON formatado
+  const jsonFormatado = formatarDadosParaEnvio(dadosRelatorio);
+  await enviarBenchmarkAPI(jsonFormatado);
   return dadosRelatorio
 }
 

@@ -3,7 +3,7 @@ const path = require("path");
 const benchmark = require("./NodeBenchmark/nodeBenchmark")
 const url = require("url");
 
-const {connectDb, getInstanceDb, closeConnectionDb} = require('./database/connection');
+const {connectDb, getInstanceDb, closeConnectionDb} = require('../BackendMongo/connection');
 const fs = require('fs');
 
 const logPath = path.join(app.getPath('userData'), 'app.log');

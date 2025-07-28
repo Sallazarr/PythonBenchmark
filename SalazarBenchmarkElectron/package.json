@@ -15,14 +15,13 @@
     "lint": "echo \"No linting configured\""
   },
   "packagerConfig": {
-  "extraFiles": [
-    {
-      "from": "renderer/dist",
-      "to": "renderer/dist"
-    }
-  ]
-},
-
+    "extraFiles": [
+      {
+        "from": "renderer/dist",
+        "to": "renderer/dist"
+      }
+    ]
+  },
   "makers": [
     {
       "name": "@electron-forge/maker-squirrel",
@@ -31,7 +30,6 @@
         "setupExe": "PayerBenchmark-Installer.exe",
         "shortcutName": "Payer Benchmark",
         "noMsi": true
-        
       }
     }
   ],
@@ -42,7 +40,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^17.2.0",
+    "axios": "^1.11.0",
     "electron-squirrel-startup": "^1.0.1",
     "mongodb": "^6.18.0",
     "systeminformation": "^5.27.7",
