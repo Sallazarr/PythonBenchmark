@@ -1,8 +1,3 @@
-/*
-ARQUIVO DE CONF PARA CONEXÃO COM O MONGO
-
-NÃO ESQUECER DE CRIAR O .ENV COM A STRING DE CONEXÃO
-*/
 const { MongoClient, ServerApiVersion } = require("mongodb");
 require("dotenv").config();
 
@@ -24,16 +19,14 @@ const client = new MongoClient(uri, {
 let instance = null;
 
 const connectDb = async () => {
-  if (instance) {
-    return;
-  }
+  if (instance) return;
 
   try {
     await client.connect();
     instance = client.db("data");
     console.log("\nConexão com MongoDB estabelecida com sucesso.\n");
   } catch (error) {
-    console.error("\nFalha ao se conectar ao MongoDB.\n");
+    console.error("\nFalha ao se conectar ao MongoDB.\n", error);
     process.exit(1);
   }
 };
