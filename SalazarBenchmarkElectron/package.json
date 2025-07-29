@@ -7,7 +7,7 @@
   "scripts": {
     "start": "electron-forge start",
     "vue:serve": "cd renderer && npm run serve",
-    "dev": "concurrently -k \"npm run vue:serve\" \"cross-env ELECTRON_START_URL=http://localhost:8080 npm run start\"",
+    "dev": "concurrently -k \"npm run vue:serve\" \"wait-on http://localhost:8080 && cross-env ELECTRON_START_URL=http://localhost:8080 npm run start\"",
     "vue:build": "cd renderer && npm run build",
     "package": "electron-forge package",
     "make": "npm run vue:build && electron-forge make",
@@ -58,7 +58,8 @@
     "@electron/fuses": "^1.8.0",
     "concurrently": "^9.2.0",
     "cross-env": "^7.0.3",
-    "electron": "37.2.3"
+    "electron": "37.2.3",
+    "wait-on": "^8.0.4"
   },
   "build": {
     "files": [

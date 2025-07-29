@@ -1,4 +1,5 @@
 function formatarDadosParaEnvio(dadosRelatorio) {
+  console.log("DADOS RELATÓRIO COMPLETO:", JSON.stringify(dadosRelatorio, null, 2));
   const dadosReestruturados = {
     "Sistema Operacional": {
       Windows: dadosRelatorio.winEdition,
@@ -15,9 +16,16 @@ function formatarDadosParaEnvio(dadosRelatorio) {
     RAM: dadosRelatorio.scores[1],
     Disco: dadosRelatorio.scores[2],
     Final: dadosRelatorio.scores[3]
-    } : {}
-
+    } : {},
+    "Tempos Testes": dadosRelatorio.temposTestes // << ADICIONAR ESTA LINHA
   };
+
+  const tempos = {
+  tempoSomaQuadrados: dadosRelatorio.tempoCPU || null,
+  tempoFatorial: dadosRelatorio.tempoCPUFatorial || null,
+  tempoAlocacaoRAM: dadosRelatorio.tempoRAM || null
+};
+
 
   return {
     sistema: {
@@ -34,6 +42,7 @@ function formatarDadosParaEnvio(dadosRelatorio) {
     })),
     temposDiscos: dadosReestruturados["Tempos Discos"],
     placaMae: dadosReestruturados["Placa Mãe"],
+    temposTestes: tempos,
     pontuacoes: dadosReestruturados["Pontuações"] || {}
   };
 }

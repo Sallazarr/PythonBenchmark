@@ -1,12 +1,12 @@
-// salazarBenchmark.js
+const si = require('systeminformation');          // Coleta detalhada de hardware e sistema
+const os = require('os');                         // Utilitários do SO
+const fs = require('fs');                         // Manipulação de arquivos
+const path = require('path');                     // Manipulação de caminhos de arquivos
+const { performance } = require('perf_hooks');    // Medição precisa de tempo de execução
+const usbDetect = require('usb-detection');       // Detecção de dispositivos USB
+const { execSync } = require('child_process');    // Execução de comandos do sistema
+const { Worker } = require('worker_threads');     // Execução de tarefas pesadas com múltiplas threads
 
-const si = require('systeminformation');
-const os = require('os');
-const fs = require('fs');
-const path = require('path');
-const { performance } = require('perf_hooks');
-const usbDetect = require('usb-detection'); // precisa instalar usb-detection
-const { execSync } = require('child_process');
 
 
 // --- Utils ---
@@ -30,14 +30,6 @@ function getReportsFolder() {
     return basePath;
   }
 }
-
-// Calcula fatorial (limitado para evitar overflow)
-function factorial(n) {
-  let res = 1;
-  for (let i = 2; i <= n; i++) res *= i;
-  return res;
-}
-
 
 // --- Coleta de Informações ---
 
@@ -194,19 +186,50 @@ function trabalhoPesado(start, end) {
   return total;
 }
 
+function runWorker(start, end) {
+  return new Promise((resolve, reject) => {
+    const worker = new Worker(`
+      const { parentPort } = require('worker_threads');
+      parentPort.on('message', ([start, end]) => {
+        let total = 0;
+        for(let i = start; i < end; i++) total += i * i;
+        parentPort.postMessage(total);
+      });
+    `, { eval: true });
+
+    worker.on('message', resolve);
+    worker.on('error', reject);
+    worker.postMessage([start, end]);
+  });
+}
+
 async function testeCPU() {
-  const numThreads = os.cpus().length;
-  const intervalo = Math.floor(15_000_000 / numThreads);
+  const numThreads = require('os').cpus().length;
+  const intervalo = Math.floor(500_000_000 / numThreads);
   const ranges = Array.from({ length: numThreads }, (_, i) => [i * intervalo, (i + 1) * intervalo]);
 
   const start = performance.now();
-  for (const [startRange, endRange] of ranges) {
-    trabalhoPesado(startRange, endRange);
-  }
+
+  // Roda todos os workers paralelamente
+  const resultados = await Promise.all(ranges.map(([startRange, endRange]) => runWorker(startRange, endRange)));
+
   const end = performance.now();
 
-  return ((end - start) / 1000).toFixed(3); // segundos
+  // resultados tem a soma parcial de cada thread
+  const total = resultados.reduce((acc, val) => acc + val, 0);
+
+  console.log("Resultado total:", total);
+
+  return ((end - start) / 1000).toFixed(3);
 }
+
+// Calcula fatorial (limitado para evitar overflow)
+function factorial(n) {
+  let res = 1;
+  for (let i = 2; i <= n; i++) res *= i;
+  return res;
+}
+
 
 // Teste CPU com fatorial (mais pesado)
 function trabalhoFatorial(start, end) {
@@ -217,19 +240,53 @@ function trabalhoFatorial(start, end) {
   return total;
 }
 
+// Worker para o teste fatorial
+function runWorkerFatorial(start, end) {
+  return new Promise((resolve, reject) => {
+    const worker = new Worker(`
+      const { parentPort } = require('worker_threads');
+
+      function factorial(n) {
+        let res = 1;
+        for (let i = 2; i <= n; i++) res *= i;
+        return res;
+      }
+
+      parentPort.on('message', ([start, end]) => {
+        let total = 0;
+        for (let i = start; i < end; i++) {
+          total += factorial((i % 200) + 1);
+        }
+        parentPort.postMessage(total);
+      });
+    `, { eval: true });
+
+    worker.on('message', resolve);
+    worker.on('error', reject);
+    worker.postMessage([start, end]);
+  });
+}
+
 async function testeCPUFatorial() {
   const numThreads = os.cpus().length;
-  const intervalo = Math.floor(10000 / numThreads);
+  const intervalo = Math.floor(1000000 / numThreads);
   const ranges = Array.from({ length: numThreads }, (_, i) => [i * intervalo, (i + 1) * intervalo]);
 
   const start = performance.now();
-  for (const [startRange, endRange] of ranges) {
-    trabalhoFatorial(startRange, endRange);
-  }
+
+  // Roda todos os workers paralelamente
+  const resultados = await Promise.all(ranges.map(([startRange, endRange]) => runWorkerFatorial(startRange, endRange)));
+
   const end = performance.now();
+
+  // resultados tem a soma parcial de cada thread
+  const total = resultados.reduce((acc, val) => acc + val, 0);
+
+  console.log("Resultado total fatorial:", total);
 
   return ((end - start) / 1000).toFixed(3);
 }
+
 
 // Teste disco - escreve e lê arquivo temporário
 async function testeDiscoEmPath(mountpoint) {
@@ -272,7 +329,7 @@ async function testeTodosDiscos(disks) {
 async function testeRAMAlocacao() {
   try {
     const start = performance.now();
-    const arr = new Float64Array(100_000_000); // ~800MB
+    const arr = new Float64Array(100_000_000);
     for (let i = 0; i < arr.length; i++) arr[i] = 1.0;
     const end = performance.now();
     return ((end - start) / 1000).toFixed(3);
@@ -425,6 +482,7 @@ async function gerarRelatorio(data) {
 
   const relatorioTxt = gerarRelatorioTxt(data);
   const relatorioJson = {
+    "Timestamp": timestampISO,
     "Sistema Operacional": {
       "Sistema": data.osInfo.system,
       "Versão": data.osInfo.version,
