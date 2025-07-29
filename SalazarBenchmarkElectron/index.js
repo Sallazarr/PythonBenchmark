@@ -3,7 +3,7 @@ const path = require("path");
 const benchmark = require("./NodeBenchmark/nodeBenchmark")
 const url = require("url");
 
-const {connectDb, getInstanceDb, closeConnectionDb} = require('../BackendMongo/connection');
+//const {connectDb, getInstanceDb, closeConnectionDb} = require('../BackendMongo/connection');
 const fs = require('fs');
 
 const logPath = path.join(app.getPath('userData'), 'app.log');
@@ -88,5 +88,25 @@ app.whenReady().then(async () => {
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
 });
+
+const API_URL = "https://payerbenchmark.onrender.com/benchmark"; // Substitua pela sua URL
+
+const enviarBenchmark = async (data) => {
+  try {
+    const res = await fetch(`${API_URL}/benchmark`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const json = await res.json();
+    console.log("Resposta da API:", json);
+  } catch (err) {
+    console.error("Erro ao enviar benchmark:", err);
+  }
+};
+
 
 // app.on("will-quit", closeConnectionDb) //mata conexão com mongo

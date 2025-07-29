@@ -552,8 +552,10 @@ async function main() {
   console.log("Benchmark finalizado.");
 
    // Enviar JSON formatado
-  const jsonFormatado = formatarDadosParaEnvio(dadosRelatorio);
-  await enviarBenchmarkAPI(jsonFormatado);
+ const jsonFormatado = formatarDadosParaEnvio(dadosRelatorio);
+console.log("JSON a ser enviado:", JSON.stringify(jsonFormatado, null, 2));
+await enviarBenchmarkAPI(jsonFormatado);
+
   return dadosRelatorio
 }
 

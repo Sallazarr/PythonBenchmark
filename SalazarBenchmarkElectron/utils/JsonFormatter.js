@@ -1,20 +1,34 @@
-function formatarDadosParaEnvio(dados) {
+function formatarDadosParaEnvio(dadosRelatorio) {
+  const dadosReestruturados = {
+    "Sistema Operacional": {
+      Windows: dadosRelatorio.winEdition,
+      "Data BIOS": dadosRelatorio.biosDate,
+      "Tipo de Máquina": dadosRelatorio.machineType
+    },
+    CPU: dadosRelatorio.cpu,
+    RAM: dadosRelatorio.ram,
+    Discos: dadosRelatorio.disks,
+    "Tempos Discos": dadosRelatorio.temposDiscos,
+    "Placa Mãe": dadosRelatorio.motherboard,
+    "Pontuações": dadosRelatorio.scores
+  };
+
   return {
     sistema: {
-      windows: dados["Sistema Operacional"]?.Windows,
-      dataBIOS: dados["Sistema Operacional"]?.["Data BIOS"],
-      tipoMaquina: dados["Sistema Operacional"]?.["Tipo de Máquina"]
+      windows: dadosReestruturados["Sistema Operacional"]?.Windows,
+      dataBIOS: dadosReestruturados["Sistema Operacional"]?.["Data BIOS"],
+      tipoMaquina: dadosReestruturados["Sistema Operacional"]?.["Tipo de Máquina"]
     },
-    cpu: dados.CPU,
-    ram: dados.RAM,
-    discos: dados.Discos?.map(disco => ({
+    cpu: dadosReestruturados.CPU,
+    ram: dadosReestruturados.RAM,
+    discos: dadosReestruturados.Discos?.map(disco => ({
       device: disco.device,
       total: disco.total,
       free: disco.free
     })),
-    temposDiscos: dados["Tempos Discos"],
-    placaMae: dados["Placa Mãe"],
-    pontuacoes: dados["Pontuações"]
+    temposDiscos: dadosReestruturados["Tempos Discos"],
+    placaMae: dadosReestruturados["Placa Mãe"],
+    pontuacoes: dadosReestruturados["Pontuações"]
   };
 }
 
