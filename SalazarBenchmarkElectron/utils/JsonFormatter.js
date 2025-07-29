@@ -10,7 +10,13 @@ function formatarDadosParaEnvio(dadosRelatorio) {
     Discos: dadosRelatorio.disks,
     "Tempos Discos": dadosRelatorio.temposDiscos,
     "Placa Mãe": dadosRelatorio.motherboard,
-    "Pontuações": dadosRelatorio.scores
+    "Pontuações": dadosRelatorio.scores ? {
+    CPU: dadosRelatorio.scores[0],
+    RAM: dadosRelatorio.scores[1],
+    Disco: dadosRelatorio.scores[2],
+    Final: dadosRelatorio.scores[3]
+    } : {}
+
   };
 
   return {
@@ -28,7 +34,7 @@ function formatarDadosParaEnvio(dadosRelatorio) {
     })),
     temposDiscos: dadosReestruturados["Tempos Discos"],
     placaMae: dadosReestruturados["Placa Mãe"],
-    pontuacoes: dadosReestruturados["Pontuações"]
+    pontuacoes: dadosReestruturados["Pontuações"] || {}
   };
 }
 
