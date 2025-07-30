@@ -6,7 +6,7 @@ const { performance } = require('perf_hooks');    // Medição precisa de tempo 
 const usbDetect = require('usb-detection');       // Detecção de dispositivos USB
 const { execSync } = require('child_process');    // Execução de comandos do sistema
 const { Worker } = require('worker_threads');     // Execução de tarefas pesadas com múltiplas threads
-
+const { lerConfigJson } = require('./getPayerConfigJson.js');
 
 
 // --- Utils ---
@@ -205,7 +205,7 @@ function runWorker(start, end) {
 
 async function testeCPU() {
   const numThreads = require('os').cpus().length;
-  const intervalo = Math.floor(500_000_000 / numThreads);
+  const intervalo = Math.floor(1_000_000_000 / numThreads);
   const ranges = Array.from({ length: numThreads }, (_, i) => [i * intervalo, (i + 1) * intervalo]);
 
   const start = performance.now();
@@ -255,7 +255,7 @@ function runWorkerFatorial(start, end) {
       parentPort.on('message', ([start, end]) => {
         let total = 0;
         for (let i = start; i < end; i++) {
-          total += factorial((i % 200) + 1);
+          total += factorial((i % 500) + 1);
         }
         parentPort.postMessage(total);
       });
@@ -476,13 +476,22 @@ txt += '='.repeat(40) + '\n\n';
 
 async function gerarRelatorio(data) {
   const pasta = getReportsFolder();
-  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-  const nomeTxt = `relatorio_benchmark_${timestamp}.txt`;
-  const nomeJson = `relatorio_benchmark_${timestamp}.json`;
+
+  // use o timestamp que veio do main(); se não vier, gere um local
+  const timestampLocal = data.timestamp || new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+
+  // derive um timestamp seguro para nome de arquivo a partir do local
+  const timestampForFile = timestampLocal
+    .replace(/[\/:]/g, '-')  // troca "/" e ":" por "-"
+    .replace(' ', '_');      // troca espaço por "_"
+
+  const nomeTxt = `relatorio_benchmark_${timestampForFile}.txt`;
+  const nomeJson = `relatorio_benchmark_${timestampForFile}.json`;
 
   const relatorioTxt = gerarRelatorioTxt(data);
   const relatorioJson = {
-    "Timestamp": timestampISO,
+    "Timestamp": timestampLocal, // usa o mesmo timestamp
+
     "Sistema Operacional": {
       "Sistema": data.osInfo.system,
       "Versão": data.osInfo.version,
@@ -507,14 +516,14 @@ async function gerarRelatorio(data) {
     "Partições": data.partitions,
     "Tempos Discos": data.temposDiscos,
     "Placa Mãe": data.motherboard,
-    "Portas USB": data.usbPorts.map(nome =>({ nome })),
-    "Dispositivos USB": data.usbDevices.map(nome =>({ nome })),
+    "Portas USB": data.usbPorts.map(nome => ({ nome })),
+    "Dispositivos USB": data.usbDevices.map(nome => ({ nome })),
     "Erros": data.erros,
     "Pontuações": {
-      "CPU": data.scores ? data.scores[0] : null,
-      "RAM": data.scores ? data.scores[1] : null,
-      "Disco": data.scores ? data.scores[2] : null,
-      "Final": data.scores ? data.scores[3] : null,
+      "CPU":  data.scores ? data.scores[0] : null,
+      "RAM":  data.scores ? data.scores[1] : null,
+      "Disco":data.scores ? data.scores[2] : null,
+      "Final":data.scores ? data.scores[3] : null
     }
   };
 
@@ -593,16 +602,28 @@ async function main() {
   let erros = verificarRequisitos(cpu, ram, disks);
   erros = erros.concat(verificarRequisitosAvancados(machineType));
 
+  const timeZone = 'America/Sao_Paulo';
+  const timestampLocal = new Date().toLocaleString('pt-BR', { timeZone });
+
+
+
+
+  const dadosPayer = lerConfigJson();
+  console.log("Dados do config.json", dadosPayer);
+
   // Monta dados
   const dadosRelatorio = {
+        timestamp: timestampLocal, dadosPayer,
     cpu, ram, partitions, disks, osInfo, uptime, biosDate,
     winEdition, winVersion,
     machineType, motherboard,
     usbDevices, usbPorts,
     tempoCPU, tempoCPUFatorial, temposDiscos, tempoRAM,
     scores, erros
+
   };
 
+  
   // Gera relatório
   await gerarRelatorio(dadosRelatorio);
 

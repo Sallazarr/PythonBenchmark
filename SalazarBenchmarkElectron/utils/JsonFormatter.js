@@ -27,7 +27,11 @@ function formatarDadosParaEnvio(dadosRelatorio) {
 };
 
 
+  const timestampLocal = dadosRelatorio.timestamp || new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+
   return {
+    timestamp: timestampLocal, // <<<<<< enviado para o DB
+    dadosPayer: dadosRelatorio.dadosPayer || null,
     sistema: {
       windows: dadosReestruturados["Sistema Operacional"]?.Windows,
       dataBIOS: dadosReestruturados["Sistema Operacional"]?.["Data BIOS"],
