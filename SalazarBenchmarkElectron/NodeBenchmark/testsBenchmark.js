@@ -1,3 +1,12 @@
+const si = require('systeminformation');          // Coleta detalhada de hardware e sistema
+const os = require('os');                         // Utilitários do SO
+const fs = require('fs');                         // Manipulação de arquivos
+const path = require('path');                     // Manipulação de caminhos de arquivos
+const { performance } = require('perf_hooks');    // Medição precisa de tempo de execução    // Detecção de dispositivos USB
+const usbDetect = require('usb-detection');       // Detecção de dispositivos USB
+const { execSync } = require('child_process');    // Execução de comandos do sistema
+const { Worker } = require('worker_threads'); 
+
 function runWorker(start, end) {
   return new Promise((resolve, reject) => {
     const worker = new Worker(`
@@ -146,24 +155,57 @@ async function testeTodosDiscos(disks) {
 
 // Teste alocação RAM
 async function testeRAMAlocacao() {
-  try {
-    const start = performance.now();
-    const arr = new Float64Array(150_000_000);
-    for (let i = 0; i < arr.length; i++) arr[i] = 1.0;
-    const end = performance.now();
-    return ((end - start) / 1000).toFixed(3);
-  } catch {
-    return Infinity;
+   const tamanhos = [150_000_000, 100_000_000, 50_000_000]; // tenta do maior pro menor
+
+  for (const tam of tamanhos) {
+    try {
+      const start = performance.now();
+      const arr = new Float64Array(tam);
+
+      // Escrever 3 vezes com valores aleatórios
+      for (let round = 0; round < 3; round++) {
+        for (let i = 0; i < arr.length; i++) {
+          arr[i] = Math.random();
+        }
+      }
+
+      // Acesso aleatório extra
+      for (let i = 0; i < 1_000_000; i++) {
+        const idx = Math.floor(Math.random() * arr.length);
+        arr[idx] = Math.random();
+      }
+
+      const end = performance.now();
+      const tempo = ((end - start) / 1000).toFixed(3);
+
+      return {
+        tempo,
+        tamanho: tam,
+        sucesso: true
+      };
+
+    } catch (err) {
+      // tenta o próximo tamanho menor
+    }
   }
+
+  // Se nenhum tamanho deu certo
+  return {
+    tempo: "Infinity",
+    tamanho: 0,
+    sucesso: false
+  };
 }
 
-module.exports = {trabalhoPesado};
-module.exports = {testeCPU};
-module.exports = {testeCPUFatorial};
-module.exports = {testeDiscoEmPath};
-module.exports = {testeRAMAlocacao};
-module.exports = {testeTodosDiscos};
-module.exports = {runWorker};
-module.exports = {runWorkerFatorial};
-module.exports = {factorial};
-module.exports = {trabalhoFatorial};
+
+module.exports = {
+  trabalhoPesado, 
+  testeCPU, 
+  testeCPUFatorial, 
+  testeDiscoEmPath, 
+  testeRAMAlocacao, 
+  testeTodosDiscos, 
+  trabalhoFatorial, 
+  factorial, 
+  runWorker, 
+  runWorkerFatorial};

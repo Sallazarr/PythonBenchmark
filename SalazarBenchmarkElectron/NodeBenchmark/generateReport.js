@@ -1,3 +1,28 @@
+const si = require('systeminformation');          // Coleta detalhada de hardware e sistema
+const os = require('os');                         // Utilitários do SO
+const fs = require('fs');                         // Manipulação de arquivos
+const path = require('path');                     // Manipulação de caminhos de arquivos
+const { performance } = require('perf_hooks');    // Medição precisa de tempo de execução
+const usbDetect = require('usb-detection');       // Detecção de dispositivos USB
+const { execSync } = require('child_process');    // Execução de comandos do sistema
+const { Worker } = require('worker_threads');     // Execução de tarefas pesadas com múltiplas threads
+
+
+function getReportsFolder() {
+  // Tenta LOCALAPPDATA para Windows, senão pasta local do executável
+  const localAppData = process.env.LOCALAPPDATA;
+  if (localAppData) {
+    const basePath = path.join(localAppData, 'salazarbenchmarkelectron', 'relatorios');
+    if (!fs.existsSync(basePath)) fs.mkdirSync(basePath, { recursive: true });
+    return basePath;
+  } else {
+    const basePath = path.join(__dirname, 'relatorios');
+    if (!fs.existsSync(basePath)) fs.mkdirSync(basePath, { recursive: true });
+    return basePath;
+  }
+}
+
+
 function gerarRelatorioTxt(data) {
   const {
     cpu, ram, disks, osInfo, motherboard, uptime, usbPorts, usbDevices,
@@ -156,5 +181,4 @@ async function gerarRelatorio(data) {
 }
 
 
-module.exports = {gerarRelatorio};
-module.exports = {gerarRelatorioTxt};
+module.exports = {gerarRelatorio, gerarRelatorioTxt};

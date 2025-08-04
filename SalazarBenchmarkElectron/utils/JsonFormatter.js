@@ -23,7 +23,8 @@ function formatarDadosParaEnvio(dadosRelatorio) {
   const tempos = {
   tempoSomaQuadrados: dadosRelatorio.tempoCPU || null,
   tempoFatorial: dadosRelatorio.tempoCPUFatorial || null,
-  tempoAlocacaoRAM: dadosRelatorio.tempoRAM || null
+  tempoAlocacaoRAM: dadosRelatorio.tempoRAM.tempo || null,
+  tamanhoRAMAlocada: dadosRelatorio.tempoRAM?.tamanho || null
 };
 
 

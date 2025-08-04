@@ -1,3 +1,16 @@
+const si = require('systeminformation');          // Coleta detalhada de hardware e sistema
+const os = require('os');                         // Utilitários do SO
+const fs = require('fs');                         // Manipulação de arquivos
+const path = require('path');                     // Manipulação de caminhos de arquivos
+const { performance } = require('perf_hooks');    // Medição precisa de tempo de execução
+const usbDetect = require('usb-detection');       // Detecção de dispositivos USB
+const { execSync } = require('child_process'); 
+
+// Converte bytes para GB com 2 casas decimais
+function bytesToGB(bytes) {
+  return +(bytes / (1024 ** 3)).toFixed(2);
+}
+
 async function getCPUInfo() {
   const cpuData = await si.cpu();
   return {
@@ -10,8 +23,11 @@ async function getCPUInfo() {
 
 async function getRAMInfo() {
   const memData = await si.mem();
+  const totalGB = bytesToGB(memData.total);
+  const installed = Math.ceil(totalGB);
   return {
-    total: bytesToGB(memData.total),
+    total: totalGB,
+    installed: installed,
     used: bytesToGB(memData.active),
     available: bytesToGB(memData.available),
     percent: Math.round((memData.active / memData.total) * 100)
@@ -142,15 +158,16 @@ async function getUSBPorts() {
 }
 
 
-module.exports = {getCPUInfo};
-module.exports = {getRAMInfo};
-module.exports = {getBIOSDate};
-module.exports = {getDiskInfo};
-module.exports = {getDiskPartitionsInfo};
-module.exports = {getMachineType};
-module.exports = {getMotherboardInfo};
-module.exports = {getOSInfo};
-module.exports = {getUptime};
-module.exports = {getUSBDevices};
-module.exports = {getUSBPorts};
-module.exports = {getWindowsEditionAndVersion};
+module.exports = {
+getCPUInfo, 
+ getBIOSDate,
+  getDiskInfo,
+   getDiskPartitionsInfo,
+    getMachineType,
+     getMotherboardInfo,
+      getOSInfo,
+       getRAMInfo,
+        getUSBDevices,
+         getUSBPorts,
+          getUptime,
+           getWindowsEditionAndVersion};
